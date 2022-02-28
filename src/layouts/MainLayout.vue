@@ -1,47 +1,19 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
-      <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
-
-        <q-toolbar-title>
-          Quasar App
-        </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
-      </q-toolbar>
-    </q-header>
-
-    <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-    >
-      <q-list>
-        <q-item-label
-          header
-        >
-          Essential Links
-        </q-item-label>
-
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
-    </q-drawer>
+  <q-layout view="hHh lpR fFf">
 
     <q-page-container>
       <router-view />
     </q-page-container>
+
+    <q-footer v-if="$router.currentRoute.value.path === '/profile' ||  $router.currentRoute.value.path === '/chat' ||  $router.currentRoute.value.path === '/mentor' || $router.currentRoute.value.path === '/'  " class="footer-tabs bg-primary q-pa-sm text-white">
+      <q-tabs align="center">
+        <q-route-tab class="non q-mx-xl" to="/" style="font-size:1rem" label="Home" />
+        <q-route-tab class="non q-mx-xl" to="/" ><i style="font-size:1rem" class="ri-restaurant-line"></i></q-route-tab>
+        <q-route-tab class=" non q-mx-xl" to="/chat" ><i style="font-size:1rem" class="ri-heart-line"></i></q-route-tab>
+        <q-route-tab class="non q-mx-xl" to="/profile" ><i style="font-size:1rem" class="ri-user-line"></i></q-route-tab>
+      </q-tabs>
+    </q-footer>
+
   </q-layout>
 </template>
 
@@ -115,3 +87,12 @@ export default defineComponent({
   }
 })
 </script>
+
+<style scoped>
+@media(max-width: 500px){
+  
+  .non{
+    margin: 0 !important;
+  }
+}
+</style>
