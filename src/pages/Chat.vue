@@ -136,6 +136,7 @@ export default {
     margin: 4rem auto;
     padding-bottom: 4rem;
     background-color: #E5E5E5;
+    padding: 2rem 0;
 
 }
 
