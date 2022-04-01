@@ -1,1 +1,13 @@
 // app global css in SCSS form
+
+.text-light {
+    color: $white;
+}
+
+.text-info {
+    color: $info;
+}
+
+.pointer-cursor {
+    cursor: pointer
+}

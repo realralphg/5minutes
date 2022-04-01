@@ -1,13 +1,10 @@
 <template>
-  <div class="wrapper container">
-    <div class="q-my-lg heeder">
+  <div class="wrapper">
+    <!-- <div class="q-my-lg heeder">
       <q-btn to="/" class="icon q-mr-md">
         <i class="ri-arrow-left-line text-black  text-weight-bold"></i>
       </q-btn>
 
-      <!-- <div class="logo">
-        <img src="/images/lo.png" alt="" />
-      </div> -->
       <span class="">Sign Up</span>
     </div>
     <div class="welcome q-my-lg">
@@ -24,64 +21,100 @@
 
     <div class="eight q-my-lg">
       <h3>OR</h3>
+    </div> -->
+
+    <div class = "row">
+      <div class="column col-6 bg-primary">
+        <form action="" class="form q-pa-md">
+          <div class="container">
+            <div class="q-pa-lg">
+              <h5 class="text-light"><b>5 minutes</b></h5>
+            </div>
+            <div class="container q-my-lg">
+              <div class="q-pt-lg">
+                <h5 class="text-light">
+                  <b>
+                    Sign up as a 
+                    <span v-show="regAsMentee">mentee</span>
+                    <span v-show="!regAsMentee">mentor</span>
+                  </b>
+                </h5>
+                <p class = "text-light">
+                  Are you looking to become a 
+                  <span @click="regAsMentee=!regAsMentee" class="pointer-cursor">
+                    <span class="text-info" v-show="!regAsMentee">mentee</span>
+                    <span class="text-info" v-show="regAsMentee">mentor</span>
+                  </span>
+                  instead
+                </p>
+              </div>
+              <div class="input-wrap">
+                <label class="text-primary" for="">Full Name</label> <br />
+
+                <div class="input">
+                  <i class="far q-mr-md fa-user text-primary"></i>
+
+                  <input type="text" placeholder="eg. Ademola" />
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label class="text-primary" for="">Email</label> <br />
+
+                <div class="input">
+                  <i class="ri-mail-line q-mr-md text-primary"></i>
+
+                  <input type="email" placeholder="Enter your email" />
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label class="text-primary" for="">Phone Number</label> <br />
+
+                <div class="input">
+                  <i class="ri-phone-fill q-mr-md text-primary"></i>
+
+                  <input type="text" placeholder="Enter your Phone Number" />
+                </div>
+              </div>
+              <div class="input-wrap">
+                <label class="text-primary" for="">Password</label> <br />
+
+                <div class="input">
+                  <i class="ri-lock-line q-mr-md text-primary"></i>
+
+                  <input type="text" placeholder="Enter your password" />
+                </div>
+              </div>
+              
+              <div class="button q-mt-xl text-center">
+                <p class="text-black">By Siging up, you agree to 5minutes <span class="text-white">Terms & Conditions</span></p>
+                <button class="btn">Register</button>
+              </div>
+
+              <p class="text-center reg text-black">
+                Already have an account?
+                <q-btn to="/login" class="text-white bt"> Login</q-btn>
+              </p>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="column col-6">
+        
+      </div>
     </div>
-
-
-    <form action="" class="form q-pa-md bg-primary">
-      <div class="input-wrap">
-        <label class="text-primary" for="">Full Name</label> <br />
-
-        <div class="input">
-          <i class="far q-mr-md fa-user text-primary"></i>
-
-          <input type="text" placeholder="eg. Ademola" />
-        </div>
-      </div>
-      <div class="input-wrap">
-        <label class="text-primary" for="">Email</label> <br />
-
-        <div class="input">
-          <i class="ri-mail-line q-mr-md text-primary"></i>
-
-          <input type="email" placeholder="Enter your email" />
-        </div>
-      </div>
-      <div class="input-wrap">
-        <label class="text-primary" for="">Phone Number</label> <br />
-
-        <div class="input">
-          <i class="ri-phone-fill q-mr-md text-primary"></i>
-
-          <input type="text" placeholder="Enter your Phone Number" />
-        </div>
-      </div>
-      <div class="input-wrap">
-        <label class="text-primary" for="">Password</label> <br />
-
-        <div class="input">
-          <i class="ri-lock-line q-mr-md text-primary"></i>
-
-          <input type="text" placeholder="Enter your password" />
-        </div>
-      </div>
-      
-      <div class="button q-mt-xl text-center">
-        <p class="text-black">By Siging up, you agree to 5minutes <span class="text-white">Terms & Conditions</span></p>
-        <button class="btn">Register</button>
-      </div>
-
-      <p class="text-center reg text-black">
-        Already have an account?
-        <q-btn to="/login" class="text-white bt"> Login</q-btn>
-      </p>
-
-    </form>
+    
     
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data(){
+    return{
+      regAsMentee: true
+    }
+  }
+};
 </script>
 
 <style scoped>
@@ -93,7 +126,7 @@ p{
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%); */
-  margin-top: 6rem;
+  /* margin-top: 6rem; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,8 +192,8 @@ p{
   object-fit: contain;
 }
 .form{
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  /* border-top-left-radius: 20px;
+  border-top-right-radius: 20px; */
 }
 
 .input-wrap,
