@@ -1,79 +1,85 @@
 <template>
-  <div class="wrapper container">
-    <div class="q-mt-xl heeder">
-      <q-btn to="/login" class="icon q-mr-md">
-        <i class="ri-arrow-left-line text-black  text-weight-bold"></i>
-      </q-btn>
-
-      <!-- <div class="logo">
-        <img src="/images/lo.png" alt="" />
-      </div> -->
-      <span class="">Log in</span>
-    </div>
-    <!-- <h1 class="text-h3 text-left text-weight-bold text-primary q-my-lg">
-      Login
-    </h1> -->
-    <div class="welcome q-my-lg">
-      <h2 class="text-weight-bold hey text-black text-h4">Hey</h2>
-      <p class="text-black">Welcome back to 5minutes</p>
-
-    </div>
-
-    <div class="iconsets">
-      <i class="ri-facebook-fill text-accent text-weight-bold"></i>
-      <i class="ri-google-fill text-info text-weight-bold"></i>
-      <i class="ri-linkedin-fill text-positive text-weight-bold"></i>
-    </div>
-
-    <div class="eight q-my-lg">
-      <h3>OR</h3>
-    </div>
-
-
-
-
-    <form action="" class="form bg-primary q-pa-md">
-      <div class="input-wrap">
-        <label class="text-primary" for="">Email</label> <br />
-
-        <div class="input">
-          <i class="ri-mail-line q-mr-md text-primary"></i>
-
-          <input type="email" placeholder="Enter your email" />
+  <div class="wrapper">
+    <div class = "row">
+      <div class="column col-md-6 bg-primary">
+        <div class="">
+          <div class="q-pa-lg">
+            <img
+              src="../assets/5minsLogo.svg"
+              spinner-color="white"
+              class="logo-sm"
+            />
+          </div>
+          <div class="left-margin right-margin">
+            <div class="">
+              <h5 class="text-light">
+                <b>
+                 Hello!
+                </b>
+              </h5>
+              <p class = "text-light">
+                Welcome back.
+              </p>
+              <div>
+                <OAuthLinks />
+              </div>
+            </div>
+            <form action="" class="form ">
+              <div class="input-wrap">
+                <label for="email" class="form-label">Email</label>
+                <q-input id="email" type="email" class="form-input" outlined placeholder="johndoe@example.com" />
+              </div>
+              <div class="input-wrap">
+                <label for="pass" class="form-label">Password</label>
+                <q-input id="pass" type="password" class="form-input" outlined placeholder="6+ Characters" />
+                <p class="small-text text-light text-right q-py-sm">
+                 <router-link to="#"><span class="text-info"><b>Forgot password?</b></span></router-link>
+                </p>
+              </div>
+              <div class="input-wrap">
+                <q-checkbox :dark="true" class="text-light" size="md" v-model="shape" val="md" label="Remember me" />
+              </div>
+              <div class="input-wrap">
+                <q-btn class="form-submit-button" rounded label="Login" />
+                <p class="small-text text-light text-center q-py-sm">
+                 Don't have an account? <router-link to="/register"><span class="text-info"><b>Create Account.</b></span></router-link>
+                </p>
+              </div>
+            </form>
+          </div>
         </div>
+
       </div>
-      <div class="input-wrap">
-        <label class="text-primary" for="">Password</label> <br />
+      <div class="column col-md-6">
 
-        <div class="input">
-          <i class="ri-lock-line q-mr-md text-primary"></i>
-
-          <input type="text" placeholder="Enter your password" />
-        </div>
-        <p class="text-white forgot">Forgot password?</p>
       </div>
-
-      <div class="button text-center">
-        <q-btn to="chat" class="btn">Login</q-btn>
-      </div>
-
-      <p class="text-black reg text-center">
-      Don’t have account?
-      <q-btn to="/register" class="text-white text-weight-bold bt"> Register</q-btn>
-      </p>
+    </div>
 
 
-    </form>
-
-    
   </div>
 </template>
 
 <script>
-export default {};
+import OAuthLinks from './widgets/OAuthLinks';
+
+export default {
+  components: {
+    "OAuthLinks": OAuthLinks
+  },
+  data(){
+    return{
+      regAsMentee: true,
+      shape: false
+    }
+  }
+};
 </script>
 
 <style scoped>
+
+p{
+  margin-bottom: 0;
+}
 .wrapper {
   /* position: absolute;
   left: 50%;
@@ -83,12 +89,6 @@ export default {};
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh !important;
-}
-
-.forgot {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .heeder {
@@ -119,6 +119,17 @@ export default {};
   cursor: pointer;
   transition: all .5s ease-in-out;
 }
+
+.reg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bt{
+  box-shadow: none !important;
+  text-transform: capitalize  !important;;
+}
 .hey{
   transition: all .5s ease-in-out;
   cursor: pointer;
@@ -128,8 +139,9 @@ export default {};
 }
 
 .iconsets i:hover {
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
+
 .heeder .logo {
   object-fit: contain;
   width: 40px;
@@ -137,53 +149,6 @@ export default {};
 }
 .heeder .logo img {
   object-fit: contain;
-}
-
-.reg{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input-wrap,
-select {
-  width: 100%;
-}
-
-.input-wrap .input {
-  /* border: 1px solid #2b945b; */
-  padding: 0.75rem;
-  margin: 1rem 0;
-  /* background: rgba(236, 236, 236, 0.67); */
-  background: #fff;
-  border: 1px solid rgba(229, 229, 229, 0.2);
-  box-sizing: border-box;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-}
-
-.input-wrap .input input,
-select {
-  border: none;
-  padding: 0.45rem;
-  background: transparent;
-  color: #959292;
-  width: 100%;
-  cursor: pointer;
-}
-.input-wrap .input input:focus,
-select:focus {
-  outline: none;
-}
-.input-wrap .input .input:hover {
-  border: 1px solid #2b945b;
-  transition: all 0.5s ease-in-out;
-}
-
-.form{
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .btn {
@@ -195,11 +160,6 @@ select:focus {
   color: #fff;
   margin: 0.55rem 0;
   width: 50%;
-}
-
-.bt{
-  box-shadow: none !important;
-  text-transform: capitalize  !important;;
 }
 
 .eight h3 {
@@ -222,11 +182,20 @@ select:focus {
   border-bottom: 1px solid #ccc;
   /* background-color: #f8f8f8; */
 }
+.left-margin{
+  margin-left: 20%
+}
+.right-margin{
+  margin-right: 10%
+}
 
 @media (max-width: 400px) {
   .input-wrap .input input:placeholder-shown,
   select {
     font-size: 14px;
+  }
+  .left-margin{
+    margin-left: 10%
   }
 }
 </style>
