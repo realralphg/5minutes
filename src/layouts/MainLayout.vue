@@ -5,15 +5,6 @@
       <router-view />
     </q-page-container>
 
-    <q-footer v-if="$router.currentRoute.value.path === '/profile' ||  $router.currentRoute.value.path === '/chat' ||  $router.currentRoute.value.path === '/mentor' || $router.currentRoute.value.path === '/'  " class="footer-tabs bg-primary q-pa-sm text-white">
-      <q-tabs align="center">
-        <q-route-tab class="non q-mx-xl" to="/" style="font-size:1rem" label="Home" />
-        <q-route-tab class="non q-mx-xl" to="/" ><i style="font-size:1rem" class="ri-restaurant-line"></i></q-route-tab>
-        <q-route-tab class=" non q-mx-xl" to="/chat" ><i style="font-size:1rem" class="ri-heart-line"></i></q-route-tab>
-        <q-route-tab class="non q-mx-xl" to="/profile" ><i style="font-size:1rem" class="ri-user-line"></i></q-route-tab>
-      </q-tabs>
-    </q-footer>
-
   </q-layout>
 </template>
 
@@ -90,7 +81,7 @@ export default defineComponent({
 
 <style scoped>
 @media(max-width: 500px){
-  
+
   .non{
     margin: 0 !important;
   }
