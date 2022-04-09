@@ -3,7 +3,7 @@
     <div class="row">
       <div class="column col-md-6 bg-primary full-page-width">
         <div class="">
-          <div class="q-pa-lg">
+          <div class="q-pt-lg q-pl-lg">
             <img
               src="../assets/5minsLogo.svg"
               spinner-color="white"
@@ -12,9 +12,9 @@
           </div>
           <div class="left-margin right-margin">
             <div class="">
-              <h5 class="text-light">
+              <div class="text-light text-h4">
                 <b> Hello! </b>
-              </h5>
+              </div>
               <p class="text-light">Welcome back.</p>
               <div>
                 <OAuthLinks />

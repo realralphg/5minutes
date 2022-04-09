@@ -3,7 +3,7 @@
     <div class="row">
       <div class="column col-md-6 bg-primary full-page-width">
         <div class="">
-          <div class="q-pa-lg">
+          <div class="q-pt-lg q-pl-lg">
             <img
               src="../assets/5minsLogo.svg"
               spinner-color="white"
@@ -12,14 +12,14 @@
           </div>
           <div class="left-margin right-margin">
             <div class="">
-              <h5 class="text-light">
+              <div class="text-light text-h4">
                 <b>
                   Sign up as a
                   <span v-show="regAsMentee">mentee</span>
                   <span v-show="!regAsMentee">mentor</span>
                 </b>
-              </h5>
-              <p class="text-light">
+              </div>
+              <div class="text-light">
                 Are you looking to become a
                 <span
                   @click="regAsMentee = !regAsMentee"
@@ -29,7 +29,7 @@
                   <span class="text-info" v-show="regAsMentee">mentor</span>
                 </span>
                 instead
-              </p>
+              </div>
               <div>
                 <OAuthLinks />
               </div>
@@ -106,12 +106,11 @@
                   class="form-submit-button"
                   rounded
                   label="Create account"
+                  flat
                 />
                 <p class="small-text text-light text-center q-py-sm">
                   Have an account?
-                  <router-link to="/login"
-                    ><span class="text-info">Login.</span></router-link
-                  >
+                  <router-link to="/login"><span class="text-info">Login.</span></router-link>
                 </p>
               </div>
             </form>
@@ -261,4 +260,8 @@ p {
     margin-left: 10%;
   }
 }
+
+/* a{
+  text-decoration: none;
+} */
 </style>

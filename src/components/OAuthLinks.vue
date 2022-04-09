@@ -1,14 +1,8 @@
 <template>
-  <div class="oauth-container row q-my-md">
-    <router-link to="#"
-      ><img class="oauth-links" src="../assets/google_auth.svg"
-    /></router-link>
-    <router-link to="#"
-      ><img class="oauth-links" src="../assets/fb_auth.svg"
-    /></router-link>
-    <router-link to="#"
-      ><img class="oauth-links" src="../assets/linkedin_auth.svg"
-    /></router-link>
+  <div class="oauth-container row q-my-md ">
+    <router-link class="oauth-links q-mt-sm text-center justify-center" to="#"><img src="../assets/google_auth.svg"/></router-link>
+    <router-link class="oauth-links q-mt-sm text-center justify-center" to="#"><img src="../assets/fb_auth.svg"/></router-link>
+    <router-link class="oauth-links q-mt-sm text-center justify-center" to="#"><img src="../assets/linkedin_auth.svg"/></router-link>
   </div>
 </template>
 

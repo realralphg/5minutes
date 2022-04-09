@@ -6,10 +6,12 @@
 
 .text-info {
   color: $info;
+  text-decoration: none !important;
 }
 
 .text-warning {
   color: $warning;
+  text-decoration: none !important;
 }
 .pointer-cursor {
   cursor: pointer;
@@ -25,7 +27,7 @@
 
 .form-label {
   color: $info;
-  font-size: 80%;
+  // font-size: 80%;
   font-weight: 600;
   padding: 5px 0 5px 2px;
 }
@@ -48,12 +50,17 @@
 }
 
 .small-text {
-  font-size: 80%;
+  // font-size: 80%;
 }
 
 .oauth-links {
-  max-height: 30px;
-  display: inline;
+  height: 35px;
+  // display: inline;
+  // border: 1px solid black;
+}
+
+.oauth-links img{
+  height: inherit
 }
 
 .form-checkbox {
