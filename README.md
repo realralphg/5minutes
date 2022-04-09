@@ -1,9 +1,11 @@
-# 5minutes App (5minutes)
+# Quasar App (newapp)
 
-5minutes is a mentor-mentee platform where mentors engage mentees sharing contents on specific interests that are consumable in no more than 5 minutes.
+A Quasar Project
 
 ## Install the dependencies
 ```bash
+yarn
+# or
 npm install
 ```
 
@@ -12,10 +14,28 @@ npm install
 quasar dev
 ```
 
+
+### Lint the files
+```bash
+yarn lint
+# or
+npm run lint
+```
+
+
+### Format the files
+```bash
+yarn format
+# or
+npm run format
+```
+
+
+
 ### Build the app for production
 ```bash
 quasar build
 ```
 
 ### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
+See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
