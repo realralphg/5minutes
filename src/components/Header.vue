@@ -1,18 +1,21 @@
 <template>
-  <q-header elevated>
+  <q-header  class="header-bg shadow-2 text-dark q-py-md">
     <q-toolbar>
       <q-btn
         flat
         dense
         round
-        icon="menu"
-        aria-label="Menu"
         @click="toggleLeftDrawer"
-      />
+      >
+        <img src = "../assets/headericons/menu-icon.svg"/>
+      </q-btn>
 
-      <q-toolbar-title> Quasar App </q-toolbar-title>
+      <q-toolbar-title><b>Dashboard</b></q-toolbar-title>
 
-      <div>Quasar v{{ $q.version }}</div>
+      <!-- header search bar container -->
+      <div class="search-bar">
+
+      </div>
     </q-toolbar>
   </q-header>
 
