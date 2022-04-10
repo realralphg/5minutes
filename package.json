@@ -1,8 +1,8 @@
 {
-  "name": "newapp",
+  "name": "5minutes",
   "version": "0.0.1",
-  "description": "A Quasar Project",
-  "productName": "Quasar App",
+  "description": "A mentorship social platform to connect mentees with their dream mentors.",
+  "productName": "5minutes",
   "author": "Daniel Don <dondaniel028@gmail.com>",
   "private": true,
   "scripts": {
