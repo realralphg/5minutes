@@ -8,3 +8,38 @@
   max-width: 80px;
 }
 
+.search-bar{
+  // display: block;
+  border: 1px solid $primary;
+  padding: 3px;
+  border-radius: 30px;
+  width: 40%;
+  .input{
+    display: block;
+    margin: 10px 7px 0 7px;
+    padding: 0;
+    height: 100%;
+    width: 75%;
+    background: none;
+    border: none;
+  }
+  .search-button{
+    color: $white;
+    background-color: $primary;
+    margin: none;
+  }
+  .separator{
+    color: $primary;
+    background-color: $primary;
+
+  }
+
+}
+.header-avatar{
+  height: 45px;
+  width: auto;
+  img{
+    height: 45px;
+    width: 100%;
+  }
+}
