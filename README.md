@@ -1,6 +1,6 @@
-# Quasar App (newapp)
+# 5minutes
 
-A Quasar Project
+A mentorship social platform to connect mentees with their dream mentors.
 
 ## Install the dependencies
 ```bash
