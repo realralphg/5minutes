@@ -1,0 +1,39 @@
+.btn-lg{
+  padding: 10px 5px;
+  border-radius: 30px;
+  width: 200px;
+}
+
+.btn-outline{
+  @extend .btn-lg;
+  background-color: none;
+  border: $primary;
+}
+
+.post-btn{
+  @extend .btn-lg;
+  border: 2px solid $warning;
+  color: $white !important;
+}
+
+.premium-btn{
+  // height: 20px;
+  padding: 0 3px;
+  margin: 0 5px 0 0;
+  font-size: 50%;
+  background-color: rgba($secondary, 0.2) !important;
+  font-weight: bold;
+  min-width: 30%;
+
+  // position: relative;
+  // top: 50%;
+  // left: 100%;
+  // transform: translate(-100%, 0%);
+}
+
+.m-i-btns{
+  padding: 0 20px;
+  font-size: 60%;
+  margin: 5px;
+  font-weight: bold;
+}

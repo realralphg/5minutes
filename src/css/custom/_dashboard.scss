@@ -1,0 +1,19 @@
+.green-card{
+  padding: 30px 10px;
+  border: 1px solid $primary;
+  background-color: rgba($secondary, 0.3);
+  border-radius: 10px;
+  font-weight: 600;
+  color: $primary;
+}
+.post-form{
+  background-color: $primary;
+  border-radius: 5px;
+  padding: 20px;
+}
+.mentor-list-item{
+  min-height: 80px;
+}
+.dashboard-badges{
+  font-size: 70%
+}
