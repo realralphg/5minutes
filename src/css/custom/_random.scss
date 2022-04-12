@@ -7,7 +7,39 @@
   border: 1px solid #aaa;
 }
 
-
 .full-page-width {
   min-height: 100vh;
+}
+
+.no-bg{
+  background: none;
+}
+
+.text-bold{
+  font-weight: 600;
+}
+
+.text-bolder{
+  font-weight: 900;
+}
+
+.bg-white{
+  background-color: $white;
+}
+
+.border-radius-5{
+  border-radius: 5px;
+}
+
+.no-border{
+  border: none;
+}
+
+.space-between{
+  justify-content: space-between;
+}
+
+.text-muted{
+  color: $accent;
+  font-size: 80%;
 }

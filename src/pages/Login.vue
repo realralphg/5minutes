@@ -92,6 +92,10 @@ export default {
       shape: false,
     };
   },
+  mounted(){
+    console.log(this.$route.path)
+    console.log(this.$route.fullPath)
+  }
 };
 </script>
 

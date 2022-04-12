@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 @import
 'quasar.variables',
 'custom/text',
 'custom/form',
 'custom/header',
 'custom/oauth',
+'custom/drawer',
+'custom/dashboard',
+'custom/btns',
 'custom/random';
+
+*{
+  font-family: 'Montserrat', sans-serif;;
+}

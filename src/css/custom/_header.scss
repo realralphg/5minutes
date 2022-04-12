@@ -1,6 +1,13 @@
 
 .header-bg {
-  background: rgba(82, 217, 114, 0.08);
+  // background: rgba(82, 217, 114, 0.08);
+  background-color: rgb(82, 217, 114);
+  .header-child{
+    background: rgba(#fff, 0.9) ;
+    // background-color: #fff;
+    height: 100%;
+    width: 100%;
+  }
 }
 
 .logo-sm {
@@ -42,4 +49,8 @@
     height: 45px;
     width: 100%;
   }
+}
+
+.header-icon{
+  color: $primary
 }

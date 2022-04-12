@@ -2,68 +2,26 @@
   <q-layout view="lHh Lpr lFf">
     <Header
       :toggleLeftDrawer="toggleLeftDrawer"
+      :activeRoute="active"
     />
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="drawer">
       <DrawerContent
-        :links = "drawerLinks"
         :leftDrawerOpen="leftDrawerOpen"
       />
     </q-drawer>
     <q-page-container>
-      <router-view />
+      <!-- {{active}} -->
+      <div class="q-ma-lg mt-50">
+        <router-view />
+      </div>
     </q-page-container>
   </q-layout>
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import DrawerContent from "components/DrawerContent.vue";
 import Header from 'components/Header.vue';
-
-const linksList = [
-  {
-    title: "Docs",
-    caption: "quasar.dev",
-    icon: "school",
-    link: "https://quasar.dev",
-  },
-  {
-    title: "Github",
-    caption: "github.com/quasarframework",
-    icon: "code",
-    link: "https://github.com/quasarframework",
-  },
-  {
-    title: "Discord Chat Channel",
-    caption: "chat.quasar.dev",
-    icon: "chat",
-    link: "https://chat.quasar.dev",
-  },
-  {
-    title: "Forum",
-    caption: "forum.quasar.dev",
-    icon: "record_voice_over",
-    link: "https://forum.quasar.dev",
-  },
-  {
-    title: "Twitter",
-    caption: "@quasarframework",
-    icon: "rss_feed",
-    link: "https://twitter.quasar.dev",
-  },
-  {
-    title: "Facebook",
-    caption: "@QuasarFramework",
-    icon: "public",
-    link: "https://facebook.quasar.dev",
-  },
-  {
-    title: "Quasar Awesome",
-    caption: "Community Quasar projects",
-    icon: "favorite",
-    link: "https://awesome.quasar.dev",
-  },
-];
 
 export default defineComponent({
   name: "IndexPage",
@@ -73,16 +31,45 @@ export default defineComponent({
     Header
   },
 
-  setup() {
-    const leftDrawerOpen = ref(false);
-
+  data() {
     return {
-      drawerLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer() {
-        leftDrawerOpen.value = !leftDrawerOpen.value;
-      },
+      leftDrawerOpen: false,
+      active: this.$store.getters["appstore/getActiveRoute"]
     };
   },
+
+  methods: {
+    toggleLeftDrawer() {
+      this.leftDrawerOpen = !this.leftDrawerOpen;
+    },
+    async setActiveRoute(){
+      // Function to set active route.
+      // takes the current path and sets state to carry active state.
+      await this.$store.dispatch("appstore/setActiveRoute", {path: this.$route.fullPath})
+      // .then(()=>{
+        // })
+        console.log(this.active);
+        this.active = this.$store.getters["appstore/getActiveRoute"];
+        console.log(this.active);
+
+    }
+  },
+
+  mounted(){
+    this.setActiveRoute();
+  },
+
+  watch: {
+    $route(){
+      this.setActiveRoute();
+    }
+  }
 });
 </script>
+<style>
+
+  .mt-50{
+    margin: 50px
+  }
+
+</style>

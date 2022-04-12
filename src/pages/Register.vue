@@ -6,7 +6,6 @@
           <div class="q-pt-lg q-pl-lg">
             <img
               src="../assets/5minsLogo.svg"
-              spinner-color="white"
               class="logo-sm"
             />
           </div>
