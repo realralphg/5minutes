@@ -4,6 +4,6 @@ export function getDrawerLinks (state) {
 }
 
 export function getActiveRoute (state) {
-  console.log("Getter reached");
+  // console.log("Getter reached");
   return state.activeRoute;
 }

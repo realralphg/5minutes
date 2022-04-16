@@ -12,7 +12,7 @@
       :key="link.title"
       clickable
       :to="link.link"
-      :class="'link active'"
+      :class="`link ${activeRoute === link.activeIndicator?'active':''}`"
     >
       <q-item-section
         v-if="link.icon"
@@ -32,16 +32,15 @@
 </template>
 
 <script>
+import drawerLinks from "../constants/drawerLinks";
 
 export default {
   name: 'DrawerContent',
+  props:["activeRoute"],
   data(){
     return {
-      links: []
+      links: drawerLinks
     }
-  },
-  mounted(){
-    this.links = this.$store.getters['appstore/getDrawerLinks'];
   }
 }
 

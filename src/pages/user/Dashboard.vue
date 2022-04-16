@@ -1,22 +1,13 @@
 <template>
-  <div class="row page-container" >
+  <div class="row page-container justify-center" >
     <div class="col-md-7">
-      <div class="row q-my-md">
-        <div class="text-h5">Welcome to <span class="text-primary">5minutes,</span> <b>ARMSTRONG!</b></div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 green-card">
-          Complete profile to get full access to 5minutes features.
-        </div>
-      </div>
-      <div class="q-my-md">
-        <q-btn outline rounded color="primary" class="q-pa-md" label="View my profile" no-caps />
-      </div>
+      <stories></stories>
+      <welcome></welcome>
       <div class="column">
         <div class="post-form">
           <div class="row">
             <q-avatar size="55px">
-              <img src="https://randomuser.me/api/portraits/men/63.jpg">
+              <img src="https://cdn.quasar.dev/img/avatar2.jpg">
             </q-avatar>
             <div class="q-ml-md q-mt-sm text-light text-bold">
               <div>What would you like to talk </div>
@@ -37,27 +28,54 @@
         </div>
       </div>
       <div class="column">
-        <div class="text-bold text-h6 q-mt-xl row">
-          <span>Explore top mentors</span>
-          <q-space />
-          <q-btn to="/" color="primary" no-caps flat>view all</q-btn>
-        </div>
-        <MentorList />
+        <mentorlist
+          :topMentors="topMentors"
+        ></mentorlist>
       </div>
     </div>
-    <div class="col-md-4 border">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde earum recusandae ullam, repellat architecto, reiciendis animi quos, voluptate reprehenderit modi hic velit dolorum obcaecati itaque! Eaque, nemo et? Explicabo hic ipsum iste, excepturi sint quos, corporis, placeat inventore aut nostrum ipsam facere eius nobis voluptas soluta ducimus veniam vitae. Cumque.
+    <div class="col-md-4">
+      <sidebar></sidebar>
     </div>
   </div>
 </template>
 
 <script>
-  import MentorList from 'components/MentorList';
+  import mentorlist from 'components/MentorList';
+  import sidebar from 'components/Sidebar';
+  import welcome from 'src/components/Welcome.vue';
+  import stories from 'src/components/Stories.vue';
 
   export default {
     name: "DashboardPage",
     components: {
-      MentorList
+      mentorlist,
+      sidebar,
+      welcome,
+      stories
+    },
+    data(){
+      return {
+        topMentors:[
+          {
+            avatar: "https://randomuser.me/api/portraits/men/7.jpg",
+            name: "John Doe",
+            career: "CEO/Director",
+            specialties: ["Github", "Development", "Leadership"]
+          },
+          {
+            avatar: "https://randomuser.me/api/portraits/men/33.jpg",
+            name: "Michael Angelo",
+            career: "Software Developer",
+            specialties: ["Programming", "Startups"]
+          },
+          {
+            avatar: "https://randomuser.me/api/portraits/men/17.jpg",
+            name: "Angus Rossetti",
+            career: "Actor",
+            specialties: ["Writing", "Leadership", "Psychology"]
+          }
+        ]
+      }
     }
   }
 

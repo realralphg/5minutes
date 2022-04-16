@@ -10,8 +10,12 @@
     .icon{
       color: $warning;
     }
+    transition: background-color ease-in 200ms;
+    &:hover{
+      background-color: rgba($white, 0.15);
+    }
   }
   .active{
-    background: linear-gradient(to right, $primary, 90%, $warning);
+    background-image: linear-gradient(to right, $primary, 85%, $warning);
   }
 }
