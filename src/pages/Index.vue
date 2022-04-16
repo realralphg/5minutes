@@ -7,6 +7,7 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered class="drawer">
       <DrawerContent
         :leftDrawerOpen="leftDrawerOpen"
+        :activeRoute="active"
       />
     </q-drawer>
     <q-page-container>
@@ -22,6 +23,7 @@
 import { defineComponent } from "vue";
 import DrawerContent from "components/DrawerContent.vue";
 import Header from 'components/Header.vue';
+import getActiveRoute from '../helpers/getBaseRoute';
 
 export default defineComponent({
   name: "IndexPage",
@@ -34,7 +36,7 @@ export default defineComponent({
   data() {
     return {
       leftDrawerOpen: false,
-      active: this.$store.getters["appstore/getActiveRoute"]
+      active: getActiveRoute(this.$route.fullPath) //this.$store.getters["appstore/getActiveRoute"]
     };
   },
 
@@ -45,13 +47,8 @@ export default defineComponent({
     async setActiveRoute(){
       // Function to set active route.
       // takes the current path and sets state to carry active state.
-      await this.$store.dispatch("appstore/setActiveRoute", {path: this.$route.fullPath})
-      // .then(()=>{
-        // })
-        console.log(this.active);
-        this.active = this.$store.getters["appstore/getActiveRoute"];
-        console.log(this.active);
-
+      this.active=getActiveRoute(this.$route.fullPath);
+      console.log(this.active);
     }
   },
 
@@ -60,8 +57,9 @@ export default defineComponent({
   },
 
   watch: {
-    $route(){
-      this.setActiveRoute();
+    $route(to){
+      this.active = getActiveRoute(to.fullPath);
+      console.log(to);
     }
   }
 });

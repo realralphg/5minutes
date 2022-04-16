@@ -10,7 +10,8 @@ const routes = [
         component: () => import("pages/Index.vue"),
         children: [
           { path: "/", component: () => import("pages/user/Dashboard.vue") },
-          { path: "/mentor", component: () => import("pages/user/Mentor.vue") },
+          { path: "/chat", component: () => import("pages/user/Chat.vue") },
+          { path: "/profile", component: () => import("pages/user/Profile.vue") },
         ]
       },
     ],

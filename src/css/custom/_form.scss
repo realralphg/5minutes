@@ -26,3 +26,115 @@
 .form-checkbox {
   color: $warning;
 }
+
+
+.search-bar{
+  padding: 3px;
+  border-radius: 30px;
+  border: 1px solid $primary;
+  .input{
+    display: block;
+    margin: 10px 7px 0 7px;
+    padding: 0;
+    height: 100%;
+    width: 75%;
+    background: none;
+    border: none;
+  }
+  .search-button{
+    color: $white;
+    background-color: $primary;
+    margin: none;
+  }
+  .separator{
+    color: $primary;
+    background-color: $primary;
+  }
+  .filter-button{
+    float: right;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.searchbar-lg-screens{
+  width: 40%;
+  display: none;
+}
+
+.searchbar-sm-screens{
+  max-width: 100%;
+  display: none;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: '1338px'){
+  .searchbar-lg-screens{
+    display: flex;
+  }
+}
+
+@media screen and (max-width: '1338px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 87.5%;
+    }
+  }
+}
+
+@media screen and (max-width: '1124px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 84%;
+    }
+  }
+}
+
+@media screen and (max-width: '1000px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: '900px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 85%;
+    }
+  }
+}
+
+@media screen and (max-width: '700px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: '430px'){
+  .searchbar-sm-screens{
+    display: flex;
+    .input{
+      width: 60%;
+    }
+  }
+}
+
+.send-form-input-container{
+  border: 1px solid $primary;
+  border-radius: 10px;
+  overflow: hidden;
+  input{
+    width: 70%;
+    border: none;
+    font-size: smaller;
+  }
+}

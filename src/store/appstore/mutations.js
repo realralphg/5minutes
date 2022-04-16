@@ -1,4 +1,4 @@
 export function setActiveRoute(state, payload){
-  console.log("Mutation reached");
+  // console.log("Mutation reached");
   state.activeRoute = payload.activeRoute;
 }

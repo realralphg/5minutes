@@ -2,16 +2,20 @@ const linksList = [
   {
     title: "Dashboard",
     icon: "dashboard",
-    // icon: "src/assets/drawericons/menu-icon.svg",
     link: "/",
     activeIndicator: "home"
   },
   {
-    title: "Mentor",
+    title: "Chat",
+    icon: "comment",
+    link: "/chat",
+    activeIndicator: "chat"
+  },
+  {
+    title: "Profile",
     icon: "person",
-    // icon: "src/assets/drawericons/menu-icon.svg",
-    link: "/mentor",
-    activeIndicator: "mentor"
+    link: "/profile",
+    activeIndicator: "profile"
   }
 ];
 

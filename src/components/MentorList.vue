@@ -3,25 +3,23 @@
     <div class="text-bold text-h6 q-mt-xl row">
       <span>Explore top mentors</span>
       <q-space />
-      <q-btn to="/" color="primary" no-caps flat>view all</q-btn>
+      <q-btn to="/" color="primary" no-caps flat>view all<q-icon name="chevron_right" /></q-btn>
     </div>
     <q-card class="my-card q-pa-md">
-      <div class="mentor-list-item row">
+      <div class="mentor-list-item row q-my-lg" v-for="mentor in topMentors" :key="mentor.avatar">
         <div class="col-2 column">
           <q-avatar clickable size="45px">
-            <img src="https://randomuser.me/api/portraits/men/7.jpg">
+            <img :src="mentor.avatar">
           </q-avatar>
         </div>
         <div class="col-6 column">
           <div class="q-pl-sm column">
-            <b>John Doe</b>
-            <small class="text-muted">CEO/Director</small>
+            <b>{{mentor.name}}</b>
+            <small class="text-muted">{{mentor.career}}</small>
           </div>
           <q-space />
           <div class="row q-mb-xs">
-            <q-chip class="dashboard-badges" label="Github" />
-            <q-chip class="dashboard-badges" label="Development" />
-            <q-chip class="dashboard-badges" label="Leadership" />
+            <q-chip v-for="specialty in mentor.specialties" :key="specialty" class="dashboard-badges" :label="specialty" />
           </div>
         </div>
         <div class="col-4 column">
@@ -41,6 +39,7 @@
 <script>
 export default {
   name: "MentorListComponent",
+  props: ["topMentors"]
 
 }
 </script>
