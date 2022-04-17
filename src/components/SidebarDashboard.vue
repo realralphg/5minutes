@@ -42,7 +42,7 @@
 </template>
 <script>
 export default {
-  name: "SidebarComponent"
+  name: "SidebarDashboardComponent"
 }
 </script>
 <style>

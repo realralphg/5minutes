@@ -138,3 +138,21 @@
     font-size: smaller;
   }
 }
+
+.edit-form{
+  .form-label{
+    color: $dark;
+  }
+  .form-input{
+    background-color: $white;
+  }
+  .input-wrap{
+    .gender-card{
+      width: 100%;
+    }
+  }
+  .select-option{
+    display: block;
+    width: 100% !important;
+  }
+}

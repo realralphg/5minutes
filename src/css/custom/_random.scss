@@ -23,6 +23,19 @@
   font-weight: 900;
 }
 
+.text-muted{
+  color: $accent;
+  font-size: 80%;
+  &-bold{
+    @extend .text-muted;
+    @extend .text-bold;
+  }
+  &-bolder{
+    @extend .text-muted;
+    @extend .text-bolder;
+  }
+}
+
 .bg-white{
   background-color: $white;
 }

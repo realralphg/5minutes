@@ -12,6 +12,7 @@ const routes = [
           { path: "/", component: () => import("pages/user/Dashboard.vue") },
           { path: "/chat", component: () => import("pages/user/Chat.vue") },
           { path: "/profile", component: () => import("pages/user/Profile.vue") },
+          { path: "/profile/edit", component: () => import("pages/user/profile/EditProfile.vue") },
         ]
       },
     ],

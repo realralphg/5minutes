@@ -1,0 +1,114 @@
+.user{
+  .user-details{
+    height: 100px;
+    margin-left: 15px;
+    .name{
+      font-weight: 600;
+    }
+    .position, .location{
+      font-size: 70%;
+    }
+    .location{
+      .icon{
+        font-size: 140%;
+      }
+    }
+    .socials{
+      margin: 10px 0 0 0;
+      img{
+        height: 20px;
+        margin-right: 5px;
+      }
+    }
+
+  }
+}
+.profile-actions{
+  .profile-action{
+    padding: 0 50px;
+    font-weight: 600;
+    font-size: 80%;
+    &-solid{
+      @extend .profile-action;
+      padding: 0 25px 0 50px;
+      margin: 0 15px;
+    }
+  }
+}
+.reviews{
+  .name{
+    font-weight: 600;
+    color: $primary
+  }
+}
+.aboutme{
+  p{
+    font-size: small;
+  }
+}
+.experience{
+  .exp-item{
+    margin: 15px 0;
+    .company-name{
+      color: $primary;
+      font-weight: 600;
+    }
+    .position{
+      font-size: 80%;
+      color: $accent;
+    }
+    .time-frame{
+      @extend .position;
+      font-weight: 600;
+      font-style: italic
+    }
+  }
+}
+.projects{
+  .project-item{
+    margin: 15px 0;
+    .project-name{
+      color: $primary;
+      font-weight: 600;
+    }
+    .link{
+      font-size: 80%;
+      color: $accent;
+    }
+    .time-frame{
+      @extend .link;
+      font-weight: 600;
+      font-style: italic
+    }
+  }
+}
+.skill-tags{
+  .tag{
+    font-size: 70%;
+    font-weight: 600;
+    padding: 5px 30px;
+    margin: 5px 30px;
+    border-radius: 30px;
+    background-color: rgba($secondary, 0.3);
+    color: $primary;
+  }
+}
+.text-sm{
+  font-size: 80%;
+}
+.edit-profile{
+
+  .edit-photo-avatar{
+    .edit-photo-badge{
+      display: none;
+      background: none !important;
+    }
+  }
+
+  .edit-photo-avatar:hover{
+    .edit-photo-badge{
+      display: block;
+      background: none !important;
+    }
+  }
+}

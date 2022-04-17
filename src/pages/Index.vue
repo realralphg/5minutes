@@ -48,7 +48,7 @@ export default defineComponent({
       // Function to set active route.
       // takes the current path and sets state to carry active state.
       this.active=getActiveRoute(this.$route.fullPath);
-      console.log(this.active);
+      // console.log(this.active);
     }
   },
 
@@ -59,7 +59,7 @@ export default defineComponent({
   watch: {
     $route(to){
       this.active = getActiveRoute(to.fullPath);
-      console.log(to);
+      // console.log(to);
     }
   }
 });

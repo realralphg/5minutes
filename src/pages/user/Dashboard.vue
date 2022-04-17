@@ -41,7 +41,7 @@
 
 <script>
   import mentorlist from 'components/MentorList';
-  import sidebar from 'components/Sidebar';
+  import sidebar from 'components/SidebarDashboard';
   import welcome from 'src/components/Welcome.vue';
   import stories from 'src/components/Stories.vue';
 
