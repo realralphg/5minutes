@@ -1,0 +1,229 @@
+.five-talks-body{
+  min-height: 80vh;
+  .cols{
+    color: #eee;
+
+    .fivetalks-search-bar{
+      padding: 3px;
+      border-radius: 30px;
+      border: 1px solid $primary;
+      height: 50px;
+      overflow: hidden;
+      .input{
+        display: block;
+        margin: 10px 7px 0 7px;
+        padding: 0;
+        width: 75%;
+        background: none;
+        border: none;
+        color: #eee
+      }
+      .fivetalks-search-button{
+        color: $white;
+        background-color: $primary;
+        margin: none;
+      }
+      .separator{
+        color: $primary;
+        background-color: $primary;
+      }
+      .filter-button{
+        float: right;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .fivetalks-searchbar-lg-screens{
+      width: 40%;
+      display: none;
+    }
+
+    .fivetalks-searchbar-sm-screens{
+      max-width: 100%;
+      display: none;
+      margin-top: 30px;
+    }
+
+    @media screen and (min-width: '1338px'){
+      .fivetalks-searchbar-lg-screens{
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: '1338px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 87.5%;
+        }
+      }
+    }
+
+    @media screen and (max-width: '1124px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 84%;
+        }
+      }
+    }
+
+    @media screen and (max-width: '1000px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 85%;
+        }
+      }
+    }
+
+    @media screen and (max-width: '900px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 85%;
+        }
+      }
+    }
+
+    @media screen and (max-width: '700px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 75%;
+        }
+      }
+    }
+
+    @media screen and (max-width: '430px'){
+      .fivetalks-searchbar-sm-screens{
+        display: flex;
+        .input{
+          width: 60%;
+        }
+      }
+    }
+
+    .cat{
+      border-radius: 15px;
+      cursor: pointer;
+      &::selection {
+        color: none;
+        background: none;
+      }
+      /* For Mozilla Firefox */
+      &::-moz-selection {
+        color: none;
+        background: none;
+      }
+      &-active{
+        @extend .cat;
+        background-color: $primary;
+      }
+    }
+
+    .fivetalks-post-item{
+      .media{
+        position : relative;
+        background-color: #000;
+        height:200px;
+        overflow: hidden;
+        &-single{
+          @extend .media;
+          // height: auto !important;
+        }
+        .media-item{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+        }
+        .overlay{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          height: 100%;
+          width: 100%;
+          background-color: rgba($primary, 0.1);
+
+        }
+      }
+      .post-title{
+        .title{
+          overflow: scroll;
+          height: 27px;
+        }
+        .desc{
+          overflow-x: scroll;
+          height: 20px;
+          width: 100%;
+        }
+      }
+      .border-bottom{
+        border-bottom: 1px solid #eee;
+      }
+      .about-speaker{
+        // height: auto;
+        // transition: height 1s ease-in;
+        overflow: hidden;
+      }
+    }
+
+    .recent-container{
+      // height: 250px;
+      .recent-item{
+        width: 200px;
+        // height: 250px;
+        margin-right: 20px;
+        .media{
+          position : relative;
+          background-color: #000;
+          height:200px;
+          overflow: hidden;
+          .overlay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($primary, 0.1);
+
+          }
+        }
+      }
+    }
+
+    .fivetalks-sidebar-container{
+      // height: 250px;
+      .sidebar-item{
+        width: 100%;
+        // height: 250px;
+        margin-right: 20px;
+        .media{
+          position : relative;
+          background-color: #000;
+          height:200px;
+          overflow: hidden;
+          .overlay{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            height: 100%;
+            width: 100%;
+            background-color: rgba($primary, 0.1);
+
+          }
+        }
+      }
+    }
+  }
+
+}

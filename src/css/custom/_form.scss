@@ -139,6 +139,18 @@
   }
 }
 
+.send-comments-form-input-container{
+  border: 1px solid $primary;
+  border-radius: 10px;
+  overflow: hidden;
+  input{
+    width: 84%;
+    border: none;
+    font-size: smaller;
+    background: none;
+  }
+}
+
 .edit-form{
   .form-label{
     color: $dark;
@@ -155,4 +167,5 @@
     display: block;
     width: 100% !important;
   }
+
 }

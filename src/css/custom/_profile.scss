@@ -1,6 +1,5 @@
 .user{
   .user-details{
-    height: 100px;
     margin-left: 15px;
     .name{
       font-weight: 600;
@@ -25,13 +24,23 @@
 }
 .profile-actions{
   .profile-action{
-    padding: 0 50px;
+    padding: 0 40px;
     font-weight: 600;
     font-size: 80%;
+    &-2{
+      @extend .profile-action;
+      padding: 0 25px 0 25px;
+      margin-left: 15px;
+    }
     &-solid{
       @extend .profile-action;
-      padding: 0 25px 0 50px;
-      margin: 0 15px;
+      padding: 0 25px 0 25px;
+      margin-left: 15px;
+      &-mentee{
+        @extend .profile-action;
+        padding: 0 40px 0 40px;
+        margin-left: 15px;
+      }
     }
   }
 }
@@ -110,5 +119,12 @@
       display: block;
       background: none !important;
     }
+  }
+}
+.set-av{
+  .calendar{
+    width: 100%;
+    border-bottom: 1px solid #dfdfdf
+
   }
 }

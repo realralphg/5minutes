@@ -1,4 +1,4 @@
-import drawerLinks from '../../constants/drawerLinks';
+import drawerLinks from '../../constants/mentorDrawerLinks';
 import getBaseRouteFromUrl from 'src/helpers/getBaseRouteFromUrl';
 
 export default function () {

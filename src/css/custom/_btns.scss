@@ -17,18 +17,32 @@
 }
 
 .premium-btn{
-  // height: 20px;
-  padding: 0 3px;
+  max-height: 20px;
+  padding: 0 13px;
   margin: 0 5px 0 0;
   font-size: 50%;
   background-color: rgba($secondary, 0.2) !important;
   font-weight: bold;
   min-width: 30%;
+}
 
-  // position: relative;
-  // top: 50%;
-  // left: 100%;
-  // transform: translate(-100%, 0%);
+.btn-tt{
+  max-height: 20px;
+  padding: 0 10px;
+  margin: 0 5px 0 0;
+  font-size: 50%;
+  background-color: rgba($secondary, 0.2) !important;
+  font-weight: bold;
+  min-width: 30%;
+}
+
+.btn-st{
+  max-height: 20px;
+  padding: 0 10px;
+  margin: 0 5px 0 0;
+  font-size: 50%;
+  font-weight: bold;
+  min-width: 30%;
 }
 
 .m-i-btns{

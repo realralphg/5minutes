@@ -1,0 +1,15 @@
+.calendar{
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  min-height: 100px;
+  .calendar-days{
+    border-bottom: 1px solid #ccc;
+    color: $accent
+  }
+  .calendar-dates{
+    .calendar-date{
+      width: 70px;
+      height: 70px;
+    }
+  }
+}

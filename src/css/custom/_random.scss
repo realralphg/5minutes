@@ -19,6 +19,22 @@
   font-weight: 600;
 }
 
+.text-xs{
+  font-size: 65%;
+}
+
+.text-md{
+  font-size: 90%;
+}
+
+.text-lg{
+  font-size: 150%;
+}
+
+.text-xl{
+  font-size: 200%;
+}
+
 .text-bolder{
   font-weight: 900;
 }
@@ -40,6 +56,26 @@
   background-color: $white;
 }
 
+.bg-red-light{
+  background-color: rgba($negative, 0.1);
+}
+
+.bg-warning-light{
+  background-color: rgba($warning, 0.1);
+}
+
+.bg-positive-light{
+  background-color: rgba($positive, 0.1);
+}
+
+.bg-primary-light{
+  background-color: rgba($primary, 0.1);
+}
+
+.bg-5talks{
+  background-color: #333;
+}
+
 .border-radius-5{
   border-radius: 5px;
 }
@@ -59,4 +95,8 @@
 .text-muted{
   color: $accent;
   font-size: 80%;
+}
+
+.h-20{
+  height: 20px !important;
 }
