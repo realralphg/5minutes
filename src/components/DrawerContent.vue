@@ -9,6 +9,7 @@
     </q-item-label>
     <q-item
       v-for="link in links"
+      v-show="link.sidebarShow"
       :key="link.title"
       clickable
       :to="link.link"
@@ -32,14 +33,15 @@
 </template>
 
 <script>
-import drawerLinks from "../constants/drawerLinks";
+import mentorDrawerLinks from "../constants/mentorDrawerLinks";
+import menteeDrawerLinks from "../constants/menteeDrawerLinks";
 
 export default {
   name: 'DrawerContent',
   props:["activeRoute"],
   data(){
     return {
-      links: drawerLinks
+      links: menteeDrawerLinks
     }
   }
 }

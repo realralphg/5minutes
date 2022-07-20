@@ -1,0 +1,9 @@
+.mentee-list-item{
+  border: 1px solid #dfdfdf;
+  border-radius: 15px;
+  height: 300px;
+  margin: 5px;
+  .view-profile{
+    background: rgba($secondary, 0.3) !important;
+  }
+}

@@ -48,6 +48,26 @@
             name: "James Campbel",
             avatar: "https://randomuser.me/api/portraits/men/6.jpg",
             posts: ["https://randomuser.me/api/portraits/men/32.jpg", "https://randomuser.me/api/portraits/men/34.jpg", "https://randomuser.me/api/portraits/men/90.jpg"]
+          },
+          {
+            name: "Julia Moretta",
+            avatar: "https://randomuser.me/api/portraits/women/63.jpg",
+            posts: ["https://randomuser.me/api/portraits/men/2.jpg", "https://randomuser.me/api/portraits/men/33.jpg", "https://randomuser.me/api/portraits/men/89.jpg"]
+          },
+          {
+            name: "Ariana Fouza",
+            avatar: "https://randomuser.me/api/portraits/women/93.jpg",
+            posts: ["https://randomuser.me/api/portraits/women/2.jpg", "https://randomuser.me/api/portraits/men/123.jpg", "https://randomuser.me/api/portraits/men/419.jpg"]
+          },
+          {
+            name: "Marina Costa",
+            avatar: "https://randomuser.me/api/portraits/women/23.jpg",
+            posts: ["https://randomuser.me/api/portraits/men/12.jpg", "https://randomuser.me/api/portraits/men/31.jpg", "https://randomuser.me/api/portraits/men/99.jpg"]
+          },
+          {
+            name: "James Campbel",
+            avatar: "https://randomuser.me/api/portraits/men/6.jpg",
+            posts: ["https://randomuser.me/api/portraits/men/32.jpg", "https://randomuser.me/api/portraits/men/34.jpg", "https://randomuser.me/api/portraits/men/90.jpg"]
           }
         ]
       }

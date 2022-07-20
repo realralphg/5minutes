@@ -138,3 +138,34 @@
     font-size: smaller;
   }
 }
+
+.send-comments-form-input-container{
+  border: 1px solid $primary;
+  border-radius: 10px;
+  overflow: hidden;
+  input{
+    width: 84%;
+    border: none;
+    font-size: smaller;
+    background: none;
+  }
+}
+
+.edit-form{
+  .form-label{
+    color: $dark;
+  }
+  .form-input{
+    background-color: $white;
+  }
+  .input-wrap{
+    .gender-card{
+      width: 100%;
+    }
+  }
+  .select-option{
+    display: block;
+    width: 100% !important;
+  }
+
+}

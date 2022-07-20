@@ -1,7 +1,10 @@
 const getBaseRoute = (path) => {
   let pathName=path.split("/");
-  pathName=pathName[1]===""?"home":pathName[1];
-
+  if(pathName.length === 2){
+    pathName = "home";
+  }else{
+    pathName=pathName[2]===""?"home":pathName[2];
+  }
   return pathName;
 }
 

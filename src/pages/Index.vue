@@ -12,7 +12,7 @@
     </q-drawer>
     <q-page-container>
       <!-- {{active}} -->
-      <div class="q-ma-lg mt-50">
+      <div class="q-ma-lg ">
         <router-view />
       </div>
     </q-page-container>
@@ -20,23 +20,28 @@
 </template>
 
 <script>
-import { defineComponent } from "vue";
+import { defineComponent, defineAsyncComponent  } from "vue";
 import DrawerContent from "components/DrawerContent.vue";
 import Header from 'components/Header.vue';
 import getActiveRoute from '../helpers/getBaseRoute';
+
+// const taskStat = defineAsyncComponent(()=>{
+//   import('components/mentee/TaskStat.vue');
+// })
 
 export default defineComponent({
   name: "IndexPage",
 
   components: {
     DrawerContent,
-    Header
+    Header,
+    // taskStat
   },
 
   data() {
     return {
       leftDrawerOpen: false,
-      active: getActiveRoute(this.$route.fullPath) //this.$store.getters["appstore/getActiveRoute"]
+      active: getActiveRoute(this.$route.fullPath)
     };
   },
 
@@ -48,7 +53,6 @@ export default defineComponent({
       // Function to set active route.
       // takes the current path and sets state to carry active state.
       this.active=getActiveRoute(this.$route.fullPath);
-      console.log(this.active);
     }
   },
 
@@ -59,7 +63,6 @@ export default defineComponent({
   watch: {
     $route(to){
       this.active = getActiveRoute(to.fullPath);
-      console.log(to);
     }
   }
 });
